@@ -21,12 +21,12 @@ def step_impl(context, phrase, rformat):
     context.response = requests.get(DUCKDUCKGO_API, params={'q': phrase, 'format': rformat})
 
 
-# Then
+# Thens
 
 @then('the response contains results for "{phrase}"')
 def step_impl(context, phrase):
-    assert phrase.lower() == context.response.json()['Heading'].lower()
     # A more comprehensive test would check 'RelatedTopics' for matching phrases
+    assert phrase.lower() == context.response.json()['Heading'].lower()
 
 
 @then('the response status code is "{code:d}"')
