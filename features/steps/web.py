@@ -31,7 +31,20 @@ def step_impl(context, phrase):
     search_input.send_keys(phrase + Keys.RETURN)
 
 
+@when('the user searches for the phrase')
+def step_impl(context):
+    search_input = context.browser.find_element_by_name('q')
+    search_input.send_keys(context.text + Keys.RETURN)
+
+
 # Thens
+
+@then('one of the results contains "{phrase}"')
+def step_impl(context, phrase):
+    xpath = "//div[@id='links']//*[contains(text(), '%s')]" % phrase
+    results = context.browser.find_elements_by_xpath(xpath)
+    assert len(results) > 0
+
 
 @then('results are shown for "{phrase}"')
 def step_impl(context, phrase):
