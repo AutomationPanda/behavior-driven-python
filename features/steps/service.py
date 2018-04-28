@@ -1,7 +1,7 @@
 """
 This module contains step definitions for service.feature.
 It uses the requests package:
-http://docs.python-requests.org/en/master/
+http://docs.python-requests.org/
 """
 
 import requests

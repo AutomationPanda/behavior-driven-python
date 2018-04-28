@@ -3,6 +3,8 @@ This module contains step definitions for web.feature.
 It uses Selenium WebDriver for browser interactions:
 https://www.seleniumhq.org/projects/webdriver/
 Setup and cleanup are handled in environment.py
+For a real test automation project,
+use Page Object Model or Screenplay Pattern to model web interactions.
 """
 
 from behave import *
