@@ -57,7 +57,7 @@ Feature: Cucumber Basket
   @add @remove
   Scenario: Add and remove cucumbers
     Given the basket is empty
-    When "5" cucumbers are added to the basket
-    And "3" cucumbers are removed from the basket
-    But "6" more cucumbers are added to the basket
-    Then the basket contains "8" cucumbers
+    When "4" cucumbers are added to the basket
+    And "6" more cucumbers are added to the basket
+    But "3" cucumbers are removed from the basket
+    Then the basket contains "7" cucumbers
