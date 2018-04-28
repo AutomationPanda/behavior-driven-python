@@ -2,7 +2,7 @@
 Feature: Cucumber Basket
   As a gardener,
   I want to carry cucumbers in a basket,
-  So that I can carry many more cucumbers than I could by hand.
+  So that I don't drop them all.
 
   # Gherkin-based automation frameworks *can* be used for unit testing.
   # However, they are better suited for integration and end-to-end testing.
