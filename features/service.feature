@@ -10,7 +10,9 @@ Feature: DuckDuckGo Instant Answer API
   # This allows greater code reuse in the automation code.
 
   Scenario Outline: Basic DuckDuckGo API Query
-    When the DuckDuckGo API is queried for "<phrase>" in "json"
+    When the DuckDuckGo API is queried with
+      | phrase   | format |
+      | <phrase> | json   |
     Then the response status code is "200"
     And the response contains results for "<phrase>"
 

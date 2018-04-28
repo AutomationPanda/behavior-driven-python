@@ -16,9 +16,11 @@ DUCKDUCKGO_API = 'https://api.duckduckgo.com/'
 
 # Whens
 
-@when('the DuckDuckGo API is queried for "{phrase}" in "{rformat}"')
-def step_impl(context, phrase, rformat):
-    context.response = requests.get(DUCKDUCKGO_API, params={'q': phrase, 'format': rformat})
+@when('the DuckDuckGo API is queried with')
+def step_impl(context):
+    first_row = context.table[0]
+    params = {'q': first_row['phrase'], 'format': first_row['format']}
+    context.response = requests.get(DUCKDUCKGO_API, params=params)
 
 
 # Thens
