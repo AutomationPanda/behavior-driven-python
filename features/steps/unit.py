@@ -1,5 +1,7 @@
 """
 This module contains step definitions for unit.feature.
+It uses the default 'parse' for step parameters:
+http://behave.readthedocs.io/en/latest/tutorial.html#step-parameters
 """
 
 from behave import *
