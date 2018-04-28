@@ -4,8 +4,9 @@ Feature: Cucumber Basket
   I want to carry cucumbers in a basket,
   So that I can carry many more cucumbers than I could by hand.
 
-  # The scenario outlines below are overkill for testing basket counts.
-  # Nevertheless, they illustrate proper usage.
+  # Gherkin-based automation frameworks *can* be used for unit testing.
+  # However, they are better suited for integration and end-to-end testing.
+  # This feature file does unit testing for the sake of illustrating Gherkin usage.
 
   @add
   Scenario Outline: Add cucumbers to a basket
