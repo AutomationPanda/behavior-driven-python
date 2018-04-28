@@ -1,7 +1,7 @@
 """
 This module contains step definitions for service.feature.
-It uses the default 'parse' for step parameters:
-http://behave.readthedocs.io/en/latest/tutorial.html#step-parameters
+It uses the requests package:
+http://docs.python-requests.org/en/master/
 """
 
 import requests
