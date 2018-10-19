@@ -10,3 +10,6 @@ The example projects (in the subdirectories)
 include full tests and documentation.
 They are companions to Python conference talks and the
 [Automation Panda](https://automationpanda.com/) blog.
+
+The `cucumbers.py` module contains a simple *CucumberBasket* class.
+It is shared by the example projects for unit testing.
