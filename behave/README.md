@@ -1,4 +1,4 @@
-# behavior-driven-python
+# behavior-driven-python/behave
 Example Test Automation Project using Python with Behave
 
 ### Purpose
