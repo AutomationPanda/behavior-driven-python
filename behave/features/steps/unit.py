@@ -4,8 +4,9 @@ It uses the default 'parse' for step parameters:
 http://behave.readthedocs.io/en/latest/tutorial.html#step-parameters
 """
 
+
 from behave import *
-from cucumbers.basket import CucumberBasket
+from cucumbers import CucumberBasket
 
 
 # Givens
