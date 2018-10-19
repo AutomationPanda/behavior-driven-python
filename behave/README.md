@@ -12,9 +12,8 @@ Tests are meant to highlight `behave` features,
 
 This project is a companion to the PyCon 2018 talk
 ["Behavior-Driven Python"](https://us.pycon.org/2018/schedule/presentation/87/)
-and the
-[Automation Panda](https://automationpanda.com/) article
-*"TBD"*.
+and the *Automation Panda* article
+[Python Testing 101: behave](https://automationpanda.com/2018/05/11/python-testing-101-behave/).
 
 ### Setup
 This project uses
@@ -87,4 +86,4 @@ behave --junit
 * [Official Behave Docs](https://behave.readthedocs.io/en/latest/)
 * [Behave on GitHub](https://github.com/behave/behave)
 * [Behave Examples on GitHub](https://github.com/behave/behave.example)
-* Behavior-Driven-Python.pdf (Slides from PyCon 2018 Talk)
+* bdp-behave.pdf (Slides from PyCon 2018 Talk)
