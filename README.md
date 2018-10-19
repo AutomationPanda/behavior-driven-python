@@ -4,7 +4,7 @@ This repository contains example projects for the following
 [BDD](https://automationpanda.com/bdd/) test frameworks:
 
 * [behave](http://behave.readthedocs.io/en/latest/index.html)
-* pytest-bdd
+* [pytest-bdd](https://github.com/pytest-dev/pytest-bdd)
 
 The example projects (in the subdirectories)
 include full tests and documentation.
