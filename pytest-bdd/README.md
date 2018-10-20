@@ -23,7 +23,8 @@ with
 Clone the project from GitHub and `pipenv install` the dependencies.
 
 The unit tests use the `cucumbers.py` module from the parent directory.
-**{TODO: ADD EXPLANATION FOR HOW IMPORT WORKS}**
+The `tests/step_defs/__init__.py` file automatically appends this path
+for import lookup using `sys.path.append`.
 
 The Web tests use
 [Selenium WebDriver](https://www.seleniumhq.org/projects/webdriver/)
@@ -37,36 +38,72 @@ Typically, they should run fine on any OS with the latest versions of Firefox an
 They have been verified on macOS 10.13.4, Firefox 59.0.2, and geckodriver 0.20.1.
 
 ### Features
-There are 3 feature files that showcase how to use `pytest-bdd` in various ways:
+There are 4 feature files that showcase how to use `pytest-bdd` in various ways:
 
 1. `unit_basic.feature`
    * Contains unit test scenarios for a cucumber basket.
    * Tests that cucumbers can be added and removed within limits.
-2. `service.feature`
+2. `unit_outlines.feature`
+   * Contains cucumber basket tests written as scenario outlines.
+3. `service.feature`
    * Contains service test scenarios for the DuckDuckGo Instant Answer API.
    * Uses [requests](http://docs.python-requests.org/) to make REST API calls.
-3. `web.feature`
+4. `web.feature`
    * Contains Web test scenarios for the DuckDuckGo home page.
    * Uses [Selenium WebDriver](https://www.seleniumhq.org/projects/webdriver/)
      to interact with the site through Firefox.
-   * Uses **{TODO: EXPLAIN HOOKS}** hooks for WebDriver setup and cleanup.
+   * Uses a custom pytest fixture for WebDriver setup and cleanup.
 
 Every feature and scenario is tagged according to coverage area.
 
 ### Test Execution
-**{TODO}**
+To run all tests from the root directory, run `pipenv run pytest`.
+All the standard
+[pytest command line options](https://docs.pytest.org/en/latest/usage.html)
+work.
+Use [command line options](http://behave.readthedocs.io/en/latest/behave.html)
+for filtering and other controls.
+Options may also be put inside the `pytest.ini`
+[configuration file](https://docs.pytest.org/en/latest/reference.html#configuration-options).
+Below are some common options (just remember to use `pipenv`):
 
 ```bash
 # run all tests
+pytest
 
-# filter tests by feature file
+# filter tests by step module
+# note: feature files cannot be run directly
+pytest tests/step_defs/test_unit_basic.py
+pytest tests/step_defs/test_unit_outlines.py
+pytest tests/step_defs/test_unit_service.py
+pytest tests/step_defs/test_unit_web.py
 
 # filter tests by tags
+# it is typically better to run by tag than by path
+pytest -k "unit"
+pytest -k "service"
+pytest -k "web"
+pytest -k "add or remove"
+pytest -k "unit and not outline"
 
 # print JUnit report
+pytest -junitxml=<path>
 ```
 
-**{TODO: outline scenarios have warnings, use --disable-pytest-warnings}**
+`pytest-bdd` tests can be executed and filtered together with regular `pytest` tests.
+Tests can all be within the same directory.
+Tags work just like [pytest.mark](https://docs.pytest.org/en/latest/example/markers.html).
+All other `pytest` plugins should work, too. For example:
+
+* Run tests in parallel with [pytest-xdist](https://docs.pytest.org/en/3.0.0/xdist.html)
+* Generate code coverage reports with [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/)
+* Integrate with popular frameworks using [pytest-django](https://pytest-django.readthedocs.io/en/latest/),
+  [pytest-flask](https://pytest-flask.readthedocs.io/en/latest/),
+  or other similar plugins
+
+*Warning: Scenario outlines cause deprecation warnings when executed.
+`pytest.ini` includes options to skip deprecation warnings.
+Alternatively, use the --disable-pytest-warnings command line option.*
 
 ### Helpful Links
 
