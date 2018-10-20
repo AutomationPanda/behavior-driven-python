@@ -1,4 +1,4 @@
-@unit @basket
+@unit @outline @basket
 Feature: Cucumber Basket with Outlines
   As a gardener,
   I want to carry multiples of cucumbers in a basket,
@@ -8,7 +8,7 @@ Feature: Cucumber Basket with Outlines
   # Outlines require extra step definition code to run.
   # They also require unique step decorators that are incompatible with regular step functions.
 
-  @add @outline
+  @add
   Scenario Outline: Add cucumbers to a basket
     Given the basket has "<initial>" cucumbers
     When "<some>" cucumbers are added to the basket
@@ -20,7 +20,7 @@ Feature: Cucumber Basket with Outlines
       | 2       | 4    | 6     |
       | 5       | 5    | 10    |
 
-  @remove @outline
+  @remove
   Scenario Outline: Remove cucumbers from the basket
     Given the basket has "<initial>" cucumbers
     When "<some>" cucumbers are removed from the basket
