@@ -66,6 +66,8 @@ Every feature and scenario is tagged according to coverage area.
 # print JUnit report
 ```
 
+**{TODO: outline scenarios have warnings, use --disable-pytest-warnings}**
+
 ### Helpful Links
 
 * [Automation Panda blog](https://automationpanda.com/)

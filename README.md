@@ -11,9 +11,7 @@ include full tests and documentation.
 They are companions to Python conference talks and the
 [Automation Panda](https://automationpanda.com/) blog.
 
-The feature files in each project are practically identical.
-However, the step definitions and related implementations are different
-because they depend upon the framework.
-
-The `cucumbers.py` module contains a simple *CucumberBasket* class.
-The example projects share it for unit testing.
+The example projects share the `cucumbers.py` module,
+which contains a simple *CucumberBasket* class for unit testing.
+However, the feature files and step definition modules in each project
+are slightly different because they depend upon the framework.
