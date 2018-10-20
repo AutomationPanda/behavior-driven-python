@@ -1,5 +1,4 @@
 # behavior-driven-python/behave
-Example Test Automation Project using Python with Behave
 
 ### Purpose
 This project shows how to do [BDD](https://automationpanda.com/bdd/)
@@ -21,6 +20,10 @@ This project uses
 with
 [pipenv](https://automationpanda.com/2018/04/16/pipenv-python-packagement-for-champions/).
 Clone the project from GitHub and `pipenv install` the dependencies.
+
+The unit tests use the `cucumbers.py` module from the parent directory.
+The `features/steps/__init__.py` file automatically appends this path
+for import lookup using `sys.path.append`.
 
 The Web tests use
 [Selenium WebDriver](https://www.seleniumhq.org/projects/webdriver/)
@@ -83,6 +86,7 @@ behave --junit
 ### Helpful Links
 
 * [Automation Panda blog](https://automationpanda.com/)
+* [Python Testing 101: behave](https://automationpanda.com/2018/05/11/python-testing-101-behave/)
 * [Official Behave Docs](https://behave.readthedocs.io/en/latest/)
 * [Behave on GitHub](https://github.com/behave/behave)
 * [Behave Examples on GitHub](https://github.com/behave/behave.example)
