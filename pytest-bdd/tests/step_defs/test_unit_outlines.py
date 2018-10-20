@@ -1,5 +1,7 @@
 """
-This module contains step definitions for unit_basic.feature.
+This module contains step definitions for unit_outline.feature.
+Note that the step decorators must be different than for regular steps.
+Scenarios must be given an example_converters dict, too.
 """
 
 from cucumbers import CucumberBasket
