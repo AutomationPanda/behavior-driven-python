@@ -39,7 +39,7 @@ They have been verified on macOS 10.13.4, Firefox 59.0.2, and geckodriver 0.20.1
 ### Features
 There are 3 feature files that showcase how to use `pytest-bdd` in various ways:
 
-1. `unit.feature`
+1. `unit_basic.feature`
    * Contains unit test scenarios for a cucumber basket.
    * Tests that cucumbers can be added and removed within limits.
 2. `service.feature`
