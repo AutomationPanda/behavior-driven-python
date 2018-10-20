@@ -71,7 +71,7 @@ Below are some common options (just remember to use `pipenv`):
 # run all tests
 pytest
 
-# filter tests by step module
+# filter tests by test module
 # note: feature files cannot be run directly
 pytest tests/step_defs/test_unit_basic.py
 pytest tests/step_defs/test_unit_outlines.py
@@ -79,7 +79,7 @@ pytest tests/step_defs/test_unit_service.py
 pytest tests/step_defs/test_unit_web.py
 
 # filter tests by tags
-# it is typically better to run by tag than by path
+# running by tag is typically better than running by path
 pytest -k "unit"
 pytest -k "service"
 pytest -k "web"
@@ -91,7 +91,7 @@ pytest -junitxml=<path>
 ```
 
 `pytest-bdd` tests can be executed and filtered together with regular `pytest` tests.
-Tests can all be within the same directory.
+Tests can all be located within the same directory.
 Tags work just like [pytest.mark](https://docs.pytest.org/en/latest/example/markers.html).
 All other `pytest` plugins should work, too. For example:
 
