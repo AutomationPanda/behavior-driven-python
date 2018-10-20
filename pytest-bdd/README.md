@@ -1,18 +1,19 @@
-# behavior-driven-python/behave
+# behavior-driven-python/pytest-bdd
 
 ### Purpose
 This project shows how to do [BDD](https://automationpanda.com/bdd/)
 in [Python](https://automationpanda.com/python/)
-using [behave](http://behave.readthedocs.io/en/latest/index.html).
-It exhibits the basics of the `behave` test framework
+using [pytest-bdd](https://github.com/pytest-dev/pytest-bdd), a plugin
+for the [pytest](https://docs.pytest.org/) test automation framework.
+It exhibits the basics of `pytest-bdd`
 with simple unit-, service-, and web-level tests.
-Tests are meant to highlight `behave` features,
+Tests are meant to highlight `pytest-bdd` features,
 *not* to necessarily show testing best practices for scalable solutions.
 
-This project is a companion to the PyCon 2018 talk
-[Behavior-Driven Python](https://automationpanda.com/2018/05/28/behavior-driven-python/)
+This project is a companion to the PyCon Canada 2018 talk
+["Behavior-Driven Python with pytest-bdd"](https://2018.pycon.ca/talks/talk-PC-51575/)
 and the *Automation Panda* article
-[Python Testing 101: behave](https://automationpanda.com/2018/05/11/python-testing-101-behave/).
+"Python Testing 101: pytest-bdd" (forthcoming).
 
 ### Setup
 This project uses
@@ -22,8 +23,7 @@ with
 Clone the project from GitHub and `pipenv install` the dependencies.
 
 The unit tests use the `cucumbers.py` module from the parent directory.
-The `features/steps/__init__.py` file automatically appends this path
-for import lookup using `sys.path.append`.
+**{TODO: ADD EXPLANATION FOR HOW IMPORT WORKS}**
 
 The Web tests use
 [Selenium WebDriver](https://www.seleniumhq.org/projects/webdriver/)
@@ -37,7 +37,7 @@ Typically, they should run fine on any OS with the latest versions of Firefox an
 They have been verified on macOS 10.13.4, Firefox 59.0.2, and geckodriver 0.20.1.
 
 ### Features
-There are 3 feature files that showcase how to use `behave` in various ways:
+There are 3 feature files that showcase how to use `pytest-bdd` in various ways:
 
 1. `unit.feature`
    * Contains unit test scenarios for a cucumber basket.
@@ -49,45 +49,28 @@ There are 3 feature files that showcase how to use `behave` in various ways:
    * Contains Web test scenarios for the DuckDuckGo home page.
    * Uses [Selenium WebDriver](https://www.seleniumhq.org/projects/webdriver/)
      to interact with the site through Firefox.
-   * Uses `environment.py` hooks for WebDriver setup and cleanup.
+   * Uses **{TODO: EXPLAIN HOOKS}** hooks for WebDriver setup and cleanup.
 
 Every feature and scenario is tagged according to coverage area.
 
 ### Test Execution
-To run all tests from the root directory, run `pipenv run behave`.
-Use [command line options](http://behave.readthedocs.io/en/latest/behave.html)
-for filtering and other controls.
-Options may also be put inside the `behave.ini`
-[configuration file](http://behave.readthedocs.io/en/latest/behave.html#configuration-files).
-Below are some common options (just remember to use `pipenv`):
+**{TODO}**
 
 ```bash
 # run all tests
-behave
 
 # filter tests by feature file
-behave features/unit.feature
-behave features/service.feature
-behave features/web.feature
 
 # filter tests by tags
-behave --tags-help
-behave --tags @unit
-behave --tags @service
-behave --tags @web
-behave --tags @duckduckgo
-behave --tags ~@unit
-behave --tags @basket --tags @add
 
 # print JUnit report
-behave --junit
 ```
 
 ### Helpful Links
 
 * [Automation Panda blog](https://automationpanda.com/)
-* [Python Testing 101: behave](https://automationpanda.com/2018/05/11/python-testing-101-behave/)
-* [Official Behave Docs](https://behave.readthedocs.io/en/latest/)
-* [Behave on GitHub](https://github.com/behave/behave)
-* [Behave Examples on GitHub](https://github.com/behave/behave.example)
-* bdp-behave.pdf (Slides from PyCon 2018 Talk)
+* Python Testing 101: pytest-bdd (forthcoming)
+* [Python Testing 101: pytest](https://automationpanda.com/2017/03/14/python-testing-101-pytest/)
+* [pytest-bdd on GitHub](https://github.com/pytest-dev/pytest-bdd)
+* [pytest Docs](https://docs.pytest.org/)
+* bdp-pytest-bdd.pdf (Slides from PyCon 2018 Talk) (forthcoming)
