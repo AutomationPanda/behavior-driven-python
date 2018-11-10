@@ -126,7 +126,7 @@
                 "sha256:a84b8c9ab6239b578f22d1c21d51b696dcfe004032bb80ea832398d6909d7279"
             ],
             "index": "pypi",
-            "version": "==2.20.0"
+            "version": ">=2.20.1"
         },
         "selenium": {
             "hashes": [
