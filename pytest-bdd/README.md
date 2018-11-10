@@ -108,7 +108,7 @@ Alternatively, use the --disable-pytest-warnings command line option.*
 ### Helpful Links
 
 * [Automation Panda blog](https://automationpanda.com/)
-* Python Testing 101: pytest-bdd (forthcoming)
+* [Python Testing 101: pytest-bdd](https://automationpanda.com/2018/10/22/python-testing-101-pytest-bdd/)
 * [Python Testing 101: pytest](https://automationpanda.com/2017/03/14/python-testing-101-pytest/)
 * [pytest-bdd on GitHub](https://github.com/pytest-dev/pytest-bdd)
 * [pytest Docs](https://docs.pytest.org/)
