@@ -45,13 +45,13 @@ def ddg_home(browser):
 
 @when(parsers.parse('the user searches for "{phrase}"'))
 def search_phrase(browser, phrase):
-    search_input = browser.find_element_by_name('q')
+    search_input = browser.find_element_by_id('search_form_input_homepage')
     search_input.send_keys(phrase + Keys.RETURN)
 
 
 @when(parsers.parse('the user searches for the phrase:\n"""{text}"""'))
 def search_long_phrase(browser, text):
-    search_input = browser.find_element_by_name('q')
+    search_input = browser.find_element_by_id('search_form_input_homepage')
     search_input.send_keys(text + Keys.RETURN)
 
 
@@ -72,5 +72,5 @@ def search_results(browser, phrase):
     links_div = browser.find_element_by_id('links')
     assert len(links_div.find_elements_by_xpath('//div')) > 0
     # Check search phrase
-    search_input = browser.find_element_by_name('q')
+    search_input = browser.find_element_by_id('search_form_input')
     assert search_input.get_attribute('value') == phrase
