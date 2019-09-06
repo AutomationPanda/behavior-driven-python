@@ -27,13 +27,13 @@ def step_impl(context):
 
 @when('the user searches for "{phrase}"')
 def step_impl(context, phrase):
-    search_input = context.browser.find_element_by_name('q')
+    search_input = context.browser.find_element_by_id('search_form_input_homepage')
     search_input.send_keys(phrase + Keys.RETURN)
 
 
 @when('the user searches for the phrase')
 def step_impl(context):
-    search_input = context.browser.find_element_by_name('q')
+    search_input = context.browser.find_element_by_id('search_form_input_homepage')
     search_input.send_keys(context.text + Keys.RETURN)
 
 
@@ -54,5 +54,5 @@ def step_impl(context, phrase):
     links_div = context.browser.find_element_by_id('links')
     assert len(links_div.find_elements_by_xpath('//div')) > 0
     # Check search phrase
-    search_input = context.browser.find_element_by_name('q')
+    search_input = context.browser.find_element_by_id('search_form_input')
     assert search_input.get_attribute('value') == phrase
