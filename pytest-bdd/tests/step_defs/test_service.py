@@ -20,9 +20,8 @@ scenarios('../features/service.feature', example_converters=dict(phrase=str))
 
 
 # Given Steps
-
-@given(parsers.parse('the DuckDuckGo API is queried with "<phrase>" using "{fmt}" format'))
-def ddg_response(phrase, fmt):
+@given(parsers.parse('the DuckDuckGo API is queried with "<phrase>" using "{fmt}" format'), target_fixture="ddg_response")
+def query_ddg(phrase, fmt):
     params = {'q': phrase, 'format': fmt}
     response = requests.get(DUCKDUCKGO_API, params=params)
     return response

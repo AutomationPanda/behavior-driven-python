@@ -5,6 +5,7 @@ Scenarios must be given an example_converters dict, too.
 """
 
 from cucumbers import CucumberBasket
+
 from pytest_bdd import scenarios, given, when, then
 
 
@@ -20,9 +21,8 @@ scenarios('../features/unit_outlines.feature', example_converters=CONVERTERS)
 
 
 # Given Steps
-
-@given('the basket has "<initial>" cucumbers')
-def basket(initial):
+@given('the basket has "<initial>" cucumbers', target_fixture="basket")
+def setup_basket(initial):
     return CucumberBasket(initial_count=initial)
 
 
