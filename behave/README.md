@@ -16,10 +16,10 @@ and the *Automation Panda* article
 
 ### Setup
 This project uses
-[Python 3](https://automationpanda.com/2017/02/07/which-version-of-python-should-i-use/)
-with
-[pipenv](https://automationpanda.com/2018/04/16/pipenv-python-packagement-for-champions/).
-Clone the project from GitHub and `pipenv install` the dependencies.
+[Python 3](https://automationpanda.com/2017/02/07/which-version-of-python-should-i-use/).
+Dependencies are listed in `requirements.txt`.
+Use [venv](https://docs.python.org/3/tutorial/venv.html)
+to create a virtual environments for dependencies.
 
 The unit tests use the `cucumbers.py` module from the parent directory.
 The `features/steps/__init__.py` file automatically appends this path
@@ -54,12 +54,12 @@ There are 3 feature files that showcase how to use `behave` in various ways:
 Every feature and scenario is tagged according to coverage area.
 
 ### Test Execution
-To run all tests from the root directory, run `pipenv run behave`.
+To run all tests from the root directory, run `behave`.
 Use [command line options](http://behave.readthedocs.io/en/latest/behave.html)
 for filtering and other controls.
 Options may also be put inside the `behave.ini`
 [configuration file](http://behave.readthedocs.io/en/latest/behave.html#configuration-files).
-Below are some common options (just remember to use `pipenv`):
+Below are some common options:
 
 ```bash
 # run all tests
