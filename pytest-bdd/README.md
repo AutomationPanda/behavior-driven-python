@@ -17,10 +17,10 @@ and the *Automation Panda* article
 
 ### Setup
 This project uses
-[Python 3](https://automationpanda.com/2017/02/07/which-version-of-python-should-i-use/)
-with
-[pipenv](https://automationpanda.com/2018/04/16/pipenv-python-packagement-for-champions/).
-Clone the project from GitHub and `pipenv install` the dependencies.
+[Python 3](https://automationpanda.com/2017/02/07/which-version-of-python-should-i-use/).
+Dependencies are listed in `requirements.txt`.
+Use [venv](https://docs.python.org/3/tutorial/venv.html)
+to create a virtual environments for dependencies.
 
 The unit tests use the `cucumbers.py` module from the parent directory.
 The `tests/step_defs/__init__.py` file automatically appends this path
@@ -57,7 +57,7 @@ There are 4 feature files that showcase how to use `pytest-bdd` in various ways:
 Every feature and scenario is tagged according to coverage area.
 
 ### Test Execution
-To run all tests from the root directory, run `pipenv run pytest`.
+To run all tests from the root directory, run `pytest`.
 All the standard
 [pytest command line options](https://docs.pytest.org/en/latest/usage.html)
 work.
@@ -65,7 +65,7 @@ Use [command line options](http://behave.readthedocs.io/en/latest/behave.html)
 for filtering and other controls.
 Options may also be put inside the `pytest.ini`
 [configuration file](https://docs.pytest.org/en/latest/reference.html#configuration-options).
-Below are some common options (just remember to use `pipenv`):
+Below are some common options:
 
 ```bash
 # run all tests

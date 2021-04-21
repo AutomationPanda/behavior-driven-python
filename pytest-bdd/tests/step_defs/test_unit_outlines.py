@@ -21,7 +21,7 @@ scenarios('../features/unit_outlines.feature', example_converters=CONVERTERS)
 
 # Given Steps
 
-@given('the basket has "<initial>" cucumbers')
+@given('the basket has "<initial>" cucumbers', target_fixture='basket')
 def basket(initial):
     return CucumberBasket(initial_count=initial)
 
