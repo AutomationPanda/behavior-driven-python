@@ -13,7 +13,7 @@ Tests are meant to highlight `pytest-bdd` features,
 This project is a companion to the PyCon Canada 2018 talk
 ["Behavior-Driven Python with pytest-bdd"](https://2018.pycon.ca/talks/talk-PC-51575/)
 and the *Automation Panda* article
-"Python Testing 101: pytest-bdd" (forthcoming).
+[Python Testing 101: pytest-bdd](https://automationpanda.com/2018/10/22/python-testing-101-pytest-bdd/).
 
 ### Setup
 This project uses
