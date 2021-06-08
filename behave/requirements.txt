@@ -7,4 +7,4 @@ parse-type==0.5.2
 requests==2.25.1
 selenium==3.141.0
 six==1.15.0
-urllib3==1.26.4
+urllib3==1.26.5
